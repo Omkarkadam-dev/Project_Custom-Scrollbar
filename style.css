@@ -1,0 +1,85 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #f0f0f0;
+    overflow: hidden;
+    /* To hide default scrollbar */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #00d4ff;
+    text-shadow: 0 0 15px #00d4ff, 0 0 30px #00d4ff;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 15px #00d4ff, 0 0 30px #00d4ff;
+    }
+
+    to {
+        text-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
+    }
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-box {
+    width: 90%;
+    max-width: 700px;
+    height: 400px;
+    overflow-y: auto;
+    background-color: #0f2027;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border: 3px solid #00d4ff;
+}
+
+/* Custom Futuristic Scrollbar Styles */
+.content-box::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content-box::-webkit-scrollbar-track {
+    background-color: #1a1a2e;
+    border-radius: 10px;
+}
+
+.content-box::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #00d4ff, #00ffcc);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00d4ff;
+    transition: background-color 0.3s ease;
+}
+
+.content-box::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #00ffcc, #00d4ff);
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+.content-box::-webkit-scrollbar-thumb:active {
+    background: #00ffcc;
+    box-shadow: 0 0 30px #00ffcc;
+}
